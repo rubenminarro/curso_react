@@ -7,6 +7,7 @@ use App\Http\Resources\PostResource;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Post;
+use App\Models\User;
 
 class PostController extends Controller
 {
@@ -26,7 +27,10 @@ class PostController extends Controller
             $request->validated(),
         );
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('message',[
+            'type' => 'success',
+            'body' => 'Post created succesfully!',
+        ]);
 
     }
 }
