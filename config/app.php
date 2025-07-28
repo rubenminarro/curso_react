@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'custom_error_pages_enblade' => env('CUSTOM_ERROR_PAGES_ENABLED', false),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
